@@ -46,3 +46,5 @@ while x == True:
         classic_password()
     elif c == 2:
         unlimited()
+    elif c == 3:
+        x = False
