@@ -1,65 +1,68 @@
-import random,os
+import random, os
 
-print("hello")
 def classic_password():
-    u = "QWERTYUIOPASDFGHJKLZXCVBNM"
+    uppercase_letters = "QWERTYUIOPASDFGHJKLZXCVBNM"
+    lowercase_letters = "qazwsxedcrfvtgbyhnujmikol"
+    special_characters = "!@#$%^&*()_+-=`~[{]}\;:/?.>,<"
+    numbers = "0123456789"
 
-    d = "qazwsxedcrfvtgbyhnujmikol"
+    all_chars = uppercase_letters + lowercase_letters + special_characters + numbers
 
-    s = "!@#$%^&*()_+-=`~[{]}\;:/?.>,<"
+    length = int(input("Enter password length: "))
 
-    n = "0123456789"
+    password = "".join(random.sample(all_chars, length))
 
-    all=u+d+s+n
+    print("Your password: ", password)
 
-    l = int(input("number pls: "))
+    accept = input("Do you accept this password? (y/n): ")
 
-    p = "".join(random.sample(all,l))
-
-    print("your password: ",p)
-    c = input("do you accept thist password y/n: ")
-    if c == "n":
+    if accept == "n":
         classic_password()
-    if c == "y":
-         t = "    ||||    "
-         f = open("passwords.txt", "a")
-         f.write(p+t)
-         f.close()
-         classic_password()
-        
+
+    elif accept == "y":
+        with open("passwords.txt", "a") as f:
+            f.write(password + "    ||||    ")
+
+        classic_password()
+
+def unlimited():
+    uppercase_letters = "QWERTYUIOPASDFGHJKLZXCVBNM"
+    lowercase_letters = "qazwsxedcrfvtgbyhnujmikol"
+    special_characters = "!@#$%^&*()_+-=`~[{]}\|;:/?.>,<"
+    numbers = "0123456789"
+
+    all_chars = uppercase_letters + lowercase_letters + special_characters + numbers
+
+    length = int(input("Enter password length: "))
+
+    while True:
+        password = "".join(random.sample(all_chars, length))
+        print("Your password: ", password)
+
+def read_passwords():
+    with open("passwords.txt", "r") as f:
+        passwords = f.read()
+        print(passwords)
+
+while True:
+    print("""    [1] Generate classic password
+    [2] Generate unlimited random password
+    [3] Read saved passwords
+    [4] Quit""")
     
-    x = False
-def unlimited(x = True):
-    u = "QWERTYUIOPASDFGHJKLZXCVBNM"
+    choice = int(input("Enter your choice: "))
 
-    d = "qazwsxedcrfvtgbyhnujmikol"
-
-    s = "!@#$%^&*()_+-=`~[{]}\|;:/?.>,<"
-
-    n = "0123456789"
-
-    all=u+d+s+n
-
-    l = int(input("number pls: "))
-    while x == True:
-        p = "".join(random.sample(all,l))
-
-        print("your password: ",p)
-
-x = True
-
-while x == True:
-    print("""    [1]classic passworld
-    [2]unlimited random password
-    [3]read my password/passwords
-    [4]quit""")
-    c = int(input("pls only number: "))
-    if c == 1:
+    if choice == 1:
         classic_password()
-    elif c == 2:
+
+    elif choice == 2:
         unlimited()
-    elif c == 3:
-        f = open("passwords.txt", "r")
-        print(f.read())
-    elif c == 4:
-        exit()
+
+    elif choice == 3:
+        read_passwords()
+
+    elif choice == 4:
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
