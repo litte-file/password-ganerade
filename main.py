@@ -20,11 +20,14 @@ def classic_password():
         classic_password()
 
     elif accept == "y":
+        ne = input("If you want to write a name or email, write if, if you do not want to write it, write no: ")
+        if ne == "no":
+            with open("passwords.txt", "a") as f:
+                f.write("password: "+password + "\n")
+            return
         with open("passwords.txt", "a") as f:
-            f.write(password + "    ||||    ")
-
-        classic_password()
-
+                f.write("name/email: "+ne+"\n"+"password: "+password + "\n")
+                
 def unlimited():
     uppercase_letters = "QWERTYUIOPASDFGHJKLZXCVBNM"
     lowercase_letters = "qazwsxedcrfvtgbyhnujmikol"
