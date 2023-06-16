@@ -1,4 +1,4 @@
-#!/home/load/project/myproject/myenv/bin/python3.10
+#!/home/load/project/password-ganerade/myenv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

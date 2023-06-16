@@ -2,9 +2,25 @@
 
 # how do i start the application
   
-  >If you are using linux/mac os, type `source myenv/bin/activate` in your terminal
-  >iF you are using windows type `myenv\Scripts\activate` in your terminal
-  >write terminal `python3 main.py` for python version.
-  or
+### **to make it run**
+
+(MacOs/linux)
+```
+$source myenv/bin/activate
+
+$python src/main.py
+
+```
+#### or
+```
+$./run.sh
+```
+
+(Windows) 
+```
+$myenv\Scripts\activate
+
+$python src/main.py
+```
   >write terminal `jupyter notebook mainjnb.ipynb` for jupyter notebook version.
 

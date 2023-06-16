@@ -19,9 +19,9 @@ def classic_password():
     if accept == "n":
         classic_password()
 
-    elif accept == "y":
+    elif accept == "y" or "yes":
         ne = input("If you want to write a name or email, write if, if you do not want to write it, write no: ")
-        if ne == "no":
+        if ne == "n" or "no":
             with open("passwords.txt", "a") as f:
                 f.write("password: "+password + "\n")
             return
@@ -51,7 +51,8 @@ while True:
     print("""    [1] Generate classic password
     [2] Generate unlimited random password
     [3] Read saved passwords
-    [4] Quit""")
+    [4] Quit
+    [5] Update""")
     
     choice = int(input("Enter your choice: "))
 
@@ -66,6 +67,8 @@ while True:
 
     elif choice == 4:
         break
+    elif choice == 5:
+        os.system("sh update.sh")
 
     else:
         print("Invalid choice. Please try again.")
