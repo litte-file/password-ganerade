@@ -16,10 +16,10 @@ def classic_password():
 
     accept = input("Do you accept this password? (y/n): ")
 
-    if accept == "n":
+    if accept == "n" or accept == "no":
         classic_password()
 
-    elif accept == "y" or "yes":
+    elif accept == "y" or accept == "yes":
         ne = input("If you want to write a name or email, write if, if you do not want to write it, write no: ")
         if ne == "n" or "no":
             with open("passwords.txt", "a") as f:
