@@ -9,7 +9,6 @@
 $source myenv/bin/activate
 
 $python src/main.py
-
 ```
 #### or
 ```
