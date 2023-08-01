@@ -71,7 +71,7 @@ $cp project/password-ganerade/passwordganeradedesktop /usr/share/applications/
 
 ```
 #!/bin/sh
-cd /path/to/password-ganerade/
+cd /home/ai/project/password-ganerade/
 python main.py
 ```
 
