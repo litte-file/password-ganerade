@@ -3,7 +3,7 @@ import random, os
 def classic_password():
     uppercase_letters = "QWERTYUIOPASDFGHJKLZXCVBNM"
     lowercase_letters = "qazwsxedcrfvtgbyhnujmikol"
-    special_characters = "!@#$%^&*()_+-=`~[{]}\;:/?.>,<"
+    special_characters = "!@#$%^&*"
     numbers = "0123456789"
 
     all_chars = uppercase_letters + lowercase_letters + special_characters + numbers

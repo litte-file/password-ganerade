@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /path/to/password-ganerade/
+cd /home/ai/project/password-ganerade/
 python main.py
