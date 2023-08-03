@@ -68,6 +68,7 @@ password:
             return
 while True:
     print("""    [1] Generate classic password
+    [2] save password
     [3] Read saved passwords
     [4] Quit
     [5] Update""")
