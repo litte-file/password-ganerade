@@ -1,6 +1,5 @@
 import random, os
-#update note:read more comfortably
-#read more comfortably
+#UPDATE NOTE:jupyter is back
 shild =("______________________")
 
 def classic_password():
@@ -24,7 +23,8 @@ def classic_password():
 
     elif accept == "y" or accept == "yes":
         ne = input("If you want to write a name or email, write if, if you do not want to write it, write no: ")
-        if ne == "n" or "no":
+        ine = input("If you want to write a name or email, write if, if you do not want to write it, write no: ")
+        if ne == "n" or ne == "no":
             with open("passwords.txt", "a") as f:
                 f.write(shild + "\n" +"password: "+password + "\n")
             return
