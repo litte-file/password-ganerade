@@ -29,12 +29,16 @@ $python src/main.py
 #### 1. open the passwordganerade.desktop file in a text editor
 
 #### 2. type the path in the file Exec= section you opened.
-#### SAMPLE: Exec=/home/ai/app/password-ganerade/run.sh
-
+#### SAMPLE: 
+```
+Exec=/home/ai/app/password-ganerade/run.sh
+```
 #### 3. type the path in the file Icon= section you opened.
 
-#### SAMPLE: Icon=/home/ai/app/password-ganerade/password.png
-
+#### SAMPLE: 
+```
+Icon=/home/ai/app/password-ganerade/password.png
+```
 #### 4. the file you opened will look like this
 
 ##### SAMPLE:
@@ -63,8 +67,10 @@ $cp project/password-ganerade/passwordganeradedesktop /usr/share/applications/
 
 #### 9. set the path to the password-ganerate file in the cd section you thhe file you opened
 
-#### SAMPLE: cd /path/to/password-ganerade/
-
+#### SAMPLE: 
+```
+cd /path/to/password-ganerade/
+```
 #### 10. the file you opened will look like this
 
 ##### SAMPLE:
