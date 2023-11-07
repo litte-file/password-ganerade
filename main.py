@@ -66,6 +66,8 @@ password:
         if choice == "n" or choice == "no":
             print("again")
             return
+def update():
+    os.system("git pull origin main")
 while True:
     print("""    [1] Generate classic password
     [2] save password
@@ -87,8 +89,7 @@ while True:
     elif choice == 4:
         break
     elif choice == 5:
-        os.system("sh update.sh")
-
+        update()
     elif choice == 2:
         save_password()
 
