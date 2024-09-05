@@ -1,0 +1,1 @@
+Canlarım bu branch yenileyecem yeni özellikleri buraya getircem main bıraktım
